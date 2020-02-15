@@ -8,7 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,99 +46,80 @@ public class MainActivity extends AppCompatActivity {
         double estatura1 = Double.parseDouble(valor2);
         int edad1 = Integer.parseInt(valor3);
 
+
+
         if(hombre.isChecked() == true){
 
             String actividad = item.getSelectedItem().toString();
+            double GET = (66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1));
+            String resultado = "";
+            double GET1 = 0;
 
             if(actividad.equals("Sedentaria")){
 
-                double GET = (66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1));
-                double GET1 = (GET*0.20)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.20)+GET;
+
             }
             if(actividad.equals("Ligera")){
 
-                double GET = 66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1);
-                double GET1 = (GET*0.30)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.30)+GET;
             }
             if(actividad.equals("Moderada")){
 
-                double GET = 66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1);
-                double GET1 = (GET*0.40)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.40)+GET;
             }
             if(actividad.equals("Intensa")){
 
-                double GET = 66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1);
-                double GET1 = (GET*0.50)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.50)+GET;
             }
             if(actividad.equals("Muy intensa")){
 
-                double GET = 66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1);
-                double GET1 = (GET*0.70)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.70)+GET;
             }
             if(actividad.equals("Accion dinamica")){
 
-                double GET = 66.5+(13.7*peso1)+(5*estatura1)-(6.8*edad1);
-                double GET1 = (GET*0.10)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                 GET1 = (GET*0.10)+GET;
             }
+
+            resultado = String.valueOf(GET1);
+            mensaje.setText(resultado);
         }else if(mujer.isChecked() == true){
 
             String actividad = item.getSelectedItem().toString();
+            double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
+            String resultado = "";
+            double GET1 = 0;
 
             if(actividad.equals("Sedentaria")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.20)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                GET1 = (GET*0.20)+GET;
+
             }
             if(actividad.equals("Ligera")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.30)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                GET1 = (GET*0.30)+GET;
             }
             if(actividad.equals("Moderada")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.40)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                GET1 = (GET*0.40)+GET;
             }
             if(actividad.equals("Intensa")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.50)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                GET1 = (GET*0.50)+GET;
             }
             if(actividad.equals("Muy intensa")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.70)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
+                GET1 = (GET*0.70)+GET;
             }
             if(actividad.equals("Accion dinamica")){
 
-                double GET = 655.1+(9.56*peso1)+(1.85*estatura1)-(4.7*edad1);
-                double GET1 = (GET*0.10)+GET;
-                String resultado = String.valueOf(GET1);
-                mensaje.setText(resultado);
-                }
+                GET1 = (GET*0.10)+GET;
             }
+
+            resultado = String.valueOf(GET1);
+            mensaje.setText(resultado);
+            }
+
         }
 
         public void Salir(View view){
